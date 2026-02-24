@@ -27,24 +27,24 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:        #FAF7F2;
-      --cream-dark:   #F2EDE4;
+      --cream:        #FFFFFF;
+      --cream-dark:   #F3F7EF;
       --white:        #FFFFFF;
-      --amber:        #D97040;
-      --amber-dark:   #B85D2C;
-      --amber-light:  rgba(217,112,64,0.08);
-      --green:        #2C5016;
-      --green-mid:    #3A6B20;
-      --green-light:  #EBF3E8;
-      --gold:         #C8A550;
-      --dark:         #1A1209;
-      --mid:          #5C4F3A;
-      --light:        #9C8C76;
-      --shadow:       0 2px 20px rgba(26,18,9,0.07);
-      --shadow-md:    0 6px 32px rgba(26,18,9,0.10);
-      --shadow-lg:    0 16px 60px rgba(26,18,9,0.13);
-      --radius:       16px;
-      --radius-sm:    10px;
+      --amber:        #C8622A;
+      --amber-dark:   #A84E1E;
+      --amber-light:  rgba(200,98,42,0.07);
+      --green:        #183808;
+      --green-mid:    #265C10;
+      --green-light:  #EAF2E4;
+      --gold:         #A07830;
+      --dark:         #0E1A08;
+      --mid:          #445238;
+      --light:        #8A9E80;
+      --shadow:       0 1px 12px rgba(14,26,8,0.06);
+      --shadow-md:    0 6px 28px rgba(14,26,8,0.09);
+      --shadow-lg:    0 20px 64px rgba(14,26,8,0.11);
+      --radius:       20px;
+      --radius-sm:    12px;
       --heading:      'Playfair Display', Georgia, serif;
       --body:         'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
@@ -80,9 +80,9 @@
       letter-spacing: -0.01em;
     }
 
-    h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); }
-    h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); }
-    h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); }
+    h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.55rem); }
 
     .section-tag {
       display: inline-block;
@@ -153,11 +153,11 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(250,247,242,0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(200,165,80,0.18);
-      padding: 14px 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(24,56,8,0.08);
+      padding: 16px 0;
     }
 
     .nav-inner {
@@ -261,8 +261,10 @@
        STATS STRIP
     ============================================= */
     .stats-strip {
-      background: var(--green);
-      padding: 52px 0;
+      background: var(--cream-dark);
+      padding: 72px 0;
+      border-top: 1px solid rgba(24,56,8,0.08);
+      border-bottom: 1px solid rgba(24,56,8,0.08);
     }
 
     .stats-grid {
@@ -273,31 +275,32 @@
     }
 
     .stat-divider {
-      border-left: 1px solid rgba(255,255,255,0.12);
+      border-left: 1px solid rgba(24,56,8,0.10);
     }
 
     .stat-num {
       font-family: var(--heading);
-      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-size: clamp(2.8rem, 5vw, 4rem);
       font-weight: 700;
-      color: var(--gold);
+      color: var(--green);
       display: block;
       line-height: 1;
+      letter-spacing: -0.02em;
     }
 
     .stat-desc {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.78);
+      color: var(--mid);
       line-height: 1.5;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     /* =============================================
        PROBLEM SECTION
     ============================================= */
     .problem {
-      padding: 88px 0;
-      background: var(--cream-dark);
+      padding: 100px 0;
+      background: var(--white);
     }
 
     .problem h2 { margin-bottom: 18px; max-width: 620px; }
@@ -319,9 +322,14 @@
     .prob-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 30px 26px;
-      box-shadow: var(--shadow);
-      border-top: 3px solid var(--amber);
+      padding: 34px 28px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(24,56,8,0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .prob-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
     }
 
     .prob-icon { font-size: 2.2rem; margin-bottom: 16px; line-height: 1; }
@@ -332,7 +340,8 @@
        PRODUCT SECTION
     ============================================= */
     .product {
-      padding: 88px 0;
+      padding: 100px 0;
+      background: var(--cream-dark);
     }
 
     .product-grid {
@@ -436,13 +445,25 @@
        WHY AVÉA SECTION
     ============================================= */
     .why {
-      padding: 88px 0;
+      padding: 100px 0;
       background: var(--green);
       color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(160,120,48,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .why .section-tag { color: var(--gold); }
-    .why h2 { color: var(--white); margin-bottom: 52px; max-width: 540px; }
+    .why h2 { color: var(--white); margin-bottom: 56px; max-width: 560px; }
 
     .why-cards {
       display: grid;
@@ -451,24 +472,28 @@
     }
 
     .why-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
       border-radius: var(--radius);
-      padding: 34px 28px;
-      transition: background 0.2s;
+      padding: 36px 30px;
+      transition: all 0.25s ease;
     }
-    .why-card:hover { background: rgba(255,255,255,0.11); }
+    .why-card:hover {
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
 
-    .why-icon { font-size: 2.4rem; line-height: 1; margin-bottom: 18px; }
-    .why-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--gold); margin-bottom: 10px; }
-    .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+    .why-icon { font-size: 2.2rem; line-height: 1; margin-bottom: 20px; }
+    .why-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--gold); margin-bottom: 12px; font-family: var(--body); }
+    .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.70); line-height: 1.70; }
 
     /* =============================================
        SURVEY / LEAD CAPTURE SECTION
     ============================================= */
     .survey-section {
-      padding: 88px 0 108px;
-      background: var(--cream-dark);
+      padding: 100px 0 120px;
+      background: var(--white);
     }
 
     .survey-wrap { max-width: 620px; margin: 0 auto; }
@@ -1080,8 +1105,8 @@
       <!-- Right: photo -->
       <div class="hero-img-wrap fade">
         <img
-          src="./istockphoto-2234954536-612x612.webp"
-          alt="Indian elderly woman with family"
+          src="./New family photo.jpg"
+          alt="Indian family with elderly grandparent"
           loading="eager"
         >
         <div class="hero-img-badge">500+ families waiting</div>
