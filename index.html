@@ -641,6 +641,8 @@
 
     /* ---- Contact fields ---- */
     .field-group { margin-bottom: 20px; }
+    .other-brand-wrap { display: none; margin-top: 14px; gap: 10px; align-items: center; }
+    .other-brand-wrap.visible { display: flex; }
 
     .field-group label {
       display: block;
@@ -1491,11 +1493,20 @@
               <div class="radio-ring"></div>
               Oziva
             </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="other">
+              <input type="radio" name="current_brand" value="other">
+              <div class="radio-ring"></div>
+              Other brand
+            </label>
             <label class="opt" data-step="6" data-field="current_brand" data-val="none">
               <input type="radio" name="current_brand" value="none">
               <div class="radio-ring"></div>
               None of the above
             </label>
+          </div>
+          <div class="other-brand-wrap" id="otherBrandWrap">
+            <input type="text" class="field" id="otherBrandInput" placeholder="Type brand name…" style="flex:1;margin:0;">
+            <button type="button" class="btn btn-amber" onclick="submitOtherBrand()" style="white-space:nowrap;padding:14px 20px;">Continue &rarr;</button>
           </div>
           <div class="step-foot">
             <button class="back-btn" onclick="goBack(6)">&#8592; Back</button>
@@ -1743,6 +1754,16 @@
       // Store answer
       answers[field] = val;
 
+      // "Other brand" — reveal text input, don't auto-advance
+      if (field === 'current_brand' && val === 'other') {
+        document.getElementById('otherBrandWrap').classList.add('visible');
+        setTimeout(function() { document.getElementById('otherBrandInput').focus(); }, 50);
+        return;
+      }
+      if (field === 'current_brand') {
+        document.getElementById('otherBrandWrap').classList.remove('visible');
+      }
+
       // Auto-advance after short delay for feel
       setTimeout(function() { goToStep(step + 1); }, 280);
     });
@@ -1759,6 +1780,13 @@
 
   function goBack(fromStep) {
     goToStep(fromStep - 1);
+  }
+
+  function submitOtherBrand() {
+    var val = document.getElementById('otherBrandInput').value.trim();
+    if (!val) { document.getElementById('otherBrandInput').focus(); return; }
+    answers['current_brand'] = val;
+    goToStep(7);
   }
 
   function updateProgress() {
