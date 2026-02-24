@@ -332,7 +332,19 @@
       box-shadow: var(--shadow-lg);
     }
 
-    .prob-icon { font-size: 2.2rem; margin-bottom: 16px; line-height: 1; }
+    .prob-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--green-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .prob-icon svg { width: 26px; height: 26px; }
     .prob-card h3 { font-size: 1rem; margin-bottom: 10px; color: var(--dark); }
     .prob-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
 
@@ -1150,17 +1162,17 @@
     </div>
     <div class="problem-cards fade fade-stagger">
       <div class="prob-card">
-        <div class="prob-icon">🏋️</div>
+        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="4" height="8" rx="1"/><rect x="5" y="11" width="3" height="4" rx="0.5"/><line x1="8" y1="13" x2="18" y2="13"/><rect x="18" y="11" width="3" height="4" rx="0.5"/><rect x="21" y="9" width="4" height="8" rx="1"/></svg></div>
         <h3>Designed for Gyms, Not for Aging</h3>
         <p>Existing products optimise for bodybuilding. Indians 50+ need protein for mobility, bone health, and everyday vitality — not bulking up.</p>
       </div>
       <div class="prob-card">
-        <div class="prob-icon">🌶️</div>
+        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13 C6 18 9.5 21 13 21 C16.5 21 20 18 20 13"/><line x1="5" y1="13" x2="21" y2="13"/><path d="M9 9 C9 7.5 10 6.5 10 5"/><path d="M13 8 C13 6.5 14 5.5 14 4"/><path d="M17 9 C17 7.5 18 6.5 18 5"/></svg></div>
         <h3>Ignores Indian Dietary Habits</h3>
         <p>Most powders are flavoured for Western palates. They don't complement dal-chawal, buttermilk, or morning chai the way a good product should.</p>
       </div>
       <div class="prob-card">
-        <div class="prob-icon">💊</div>
+        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="13" y1="8" x2="13" y2="22"/><line x1="9" y1="22" x2="17" y2="22"/><line x1="4" y1="9" x2="22" y2="9"/><circle cx="13" cy="8" r="1.5"/><line x1="5" y1="9" x2="4" y2="14"/><line x1="9" y1="9" x2="10" y2="14"/><path d="M4 14 Q7 17.5 10 14"/><line x1="17" y1="9" x2="16" y2="14"/><line x1="21" y1="9" x2="22" y2="14"/><path d="M16 14 Q19 17.5 22 14"/></svg></div>
         <h3>Too Clinical or Too Casual</h3>
         <p>Either it feels like a scary medical supplement or a gym shake. There's no warm, trustworthy middle ground built for Indian families.</p>
       </div>
