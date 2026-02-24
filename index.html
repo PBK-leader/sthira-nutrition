@@ -902,9 +902,9 @@
     ============================================= */
     .mockup-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       align-items: stretch;
-      gap: 16px;
+      gap: 14px;
       margin-bottom: 8px;
     }
 
@@ -990,6 +990,7 @@
     .pouch-1 .pouch-color { background: #4A7040; }
     .pouch-2 .pouch-color { background: #9E6060; }
     .pouch-3 .pouch-color { background: #B89060; }
+    .pouch-4 .pouch-color { background: #A07828; }
 
     .mockup-note {
       text-align: center;
@@ -1008,6 +1009,7 @@
       .product-grid { grid-template-columns: 1fr; gap: 44px; }
       .stories-grid { grid-template-columns: 1fr 1fr; }
       .story-card-tall { aspect-ratio: 1/1; }
+      .mockup-row { grid-template-columns: repeat(2, 1fr); }
     }
 
     /* =============================================
@@ -1203,6 +1205,23 @@
             </div>
           </div>
 
+          <!-- Pouch 4: Haldi Milk -->
+          <div class="pouch-wrap">
+            <div class="pouch pouch-4">
+              <div class="pouch-color">
+                <div class="pouch-eyebrow">Protein for 50+</div>
+                <div class="pouch-brand">Avéa</div>
+                <div class="pouch-type">Functional Protein</div>
+                <div class="pouch-divider"></div>
+              </div>
+              <div class="pouch-white">
+                <div class="pouch-flavor">Haldi Milk</div>
+                <div class="pouch-macro">25g</div>
+                <div class="pouch-macro-sub">Protein per serving</div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <p class="mockup-note">Concept packaging — final design in development</p>
       </div>
@@ -1249,7 +1268,7 @@
             </div>
             <div class="feature-text">
               <h4>Indian Flavour Profiles</h4>
-              <p>Cardamom milk, rose lassi, and more — built for Indian taste preferences</p>
+              <p>Cardamom milk, rose lassi, haldi milk, and more — built for Indian taste preferences</p>
             </div>
           </li>
         </ul>
