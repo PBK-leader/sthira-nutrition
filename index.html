@@ -893,155 +893,87 @@
     .mockup-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 16px;
       margin-bottom: 8px;
     }
 
-    .canister-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .pouch-wrap {
       transition: transform 0.28s ease;
       cursor: default;
     }
-    .canister-wrap:hover { transform: translateY(-8px); }
+    .pouch-wrap:hover { transform: translateY(-6px); }
 
-    .can-lid {
-      width: 64%;
-      height: 13px;
-      border-radius: 7px 7px 0 0;
-      position: relative;
-      z-index: 1;
-    }
-    .can-lid::after {
-      content: '';
-      position: absolute;
-      top: 4px;
-      left: 18%; right: 18%;
-      height: 3px;
-      background: rgba(255,255,255,0.22);
-      border-radius: 2px;
-    }
-
-    .can-body {
-      width: 100%;
-      border-radius: 10px;
-      padding: 20px 10px 18px;
-      text-align: center;
-      position: relative;
-      min-height: 195px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.1);
+    .pouch {
+      border-radius: 18px;
       overflow: hidden;
+      box-shadow: 0 8px 32px rgba(14,26,8,0.13);
     }
 
-    .can-shine {
-      position: absolute;
-      top: 0; left: 8%; width: 22%; bottom: 0;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
-      pointer-events: none;
+    .pouch-color {
+      padding: 26px 18px 20px;
+      text-align: center;
     }
-
-    .can-brand {
-      font-family: var(--heading);
+    .pouch-eyebrow {
+      font-size: 0.55rem;
       font-weight: 700;
-      font-size: 1.35rem;
-      letter-spacing: -0.02em;
-      position: relative;
-      z-index: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 10px;
+    }
+    .pouch-brand {
+      font-family: var(--heading);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #fff;
       line-height: 1;
     }
-    .can-brand em { font-style: normal; }
+    .pouch-type {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 7px;
+    }
+    .pouch-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.18);
+      margin: 16px 0 0;
+    }
 
-    .can-flavor {
+    .pouch-white {
+      background: #fff;
+      padding: 14px 18px 18px;
+    }
+    .pouch-flavor {
       font-size: 0.62rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: 5px;
-      position: relative;
-      z-index: 1;
-      opacity: 0.82;
+      color: var(--mid);
+      margin-bottom: 5px;
     }
-
-    .can-rule {
-      width: 36px;
-      height: 1px;
-      margin: 11px auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .can-protein {
-      font-size: 1.05rem;
-      font-weight: 700;
-      position: relative;
-      z-index: 1;
+    .pouch-macro {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--dark);
       line-height: 1;
     }
-    .can-protein-sub {
-      font-size: 0.6rem;
+    .pouch-macro-sub {
+      font-size: 0.57rem;
       font-weight: 500;
-      opacity: 0.75;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--light);
       margin-top: 3px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
     }
 
-    .can-badge {
-      position: absolute;
-      top: 12px; right: 10px;
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.55rem;
-      font-weight: 800;
-      text-align: center;
-      line-height: 1.2;
-      z-index: 2;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .can-base {
-      width: 84%;
-      height: 9px;
-      border-radius: 0 0 5px 5px;
-      margin-top: -1px;
-    }
-
-    .can-label { font-size: 0.75rem; font-weight: 600; margin-top: 12px; color: var(--mid); text-align: center; }
-
-    /* Variant 1 — Forest Green */
-    .can-1 .can-lid  { background: #1a2f0a; }
-    .can-1 .can-body { background: linear-gradient(160deg, #2C5016 0%, #1a2f0a 100%); color: #fff; }
-    .can-1 .can-rule { background: var(--gold); }
-    .can-1 .can-badge { background: var(--gold); color: var(--dark); }
-    .can-1 .can-base { background: #111f07; }
-
-    /* Variant 2 — Terracotta / Rose Lassi */
-    .can-2 .can-lid  { background: #7a2e1c; }
-    .can-2 .can-body { background: linear-gradient(160deg, #C25A40 0%, #8c3220 100%); color: #fff; }
-    .can-2 .can-rule { background: rgba(255,255,255,0.55); }
-    .can-2 .can-badge { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
-    .can-2 .can-base { background: #5a2010; }
-
-    /* Variant 3 — Ivory / Vanilla */
-    .can-3 .can-lid  { background: #b09050; }
-    .can-3 .can-body { background: linear-gradient(160deg, #F7EDD6 0%, #ead9b5 100%); color: var(--dark); }
-    .can-3 .can-rule { background: var(--green); }
-    .can-3 .can-badge { background: var(--green); color: #fff; }
-    .can-3 .can-base { background: #c8aa68; }
-    .can-3 .can-brand { color: var(--green); }
-    .can-3 .can-protein { color: var(--green); }
-    .can-3 .can-flavor { color: var(--mid); }
+    /* Variant colours — muted earthy tones */
+    .pouch-1 .pouch-color { background: #4A7040; }
+    .pouch-2 .pouch-color { background: #9E6060; }
+    .pouch-3 .pouch-color { background: #B89060; }
 
     .mockup-note {
       text-align: center;
@@ -1200,56 +1132,59 @@
     </div>
     <div class="product-grid">
 
-      <!-- Product mockups — 3 canister variants -->
+      <!-- Product mockups — 3 pouch variants -->
       <div class="fade">
         <div class="mockup-row">
 
-          <!-- Canister 1: Cardamom Milk — Forest Green -->
-          <div class="canister-wrap">
-            <div class="can-lid can-1"></div>
-            <div class="can-body can-1">
-              <div class="can-shine"></div>
-              <div class="can-badge can-1">For<br>50+</div>
-              <div class="can-brand">Av<em>é</em>a</div>
-              <div class="can-flavor">Cardamom Milk</div>
-              <div class="can-rule can-1"></div>
-              <div class="can-protein">25g</div>
-              <div class="can-protein-sub">Protein per serving</div>
+          <!-- Pouch 1: Cardamom Milk -->
+          <div class="pouch-wrap">
+            <div class="pouch pouch-1">
+              <div class="pouch-color">
+                <div class="pouch-eyebrow">Protein for 50+</div>
+                <div class="pouch-brand">Avéa</div>
+                <div class="pouch-type">Functional Protein</div>
+                <div class="pouch-divider"></div>
+              </div>
+              <div class="pouch-white">
+                <div class="pouch-flavor">Cardamom Milk</div>
+                <div class="pouch-macro">25g</div>
+                <div class="pouch-macro-sub">Protein per serving</div>
+              </div>
             </div>
-            <div class="can-base can-1"></div>
-            <div class="can-label">Cardamom Milk</div>
           </div>
 
-          <!-- Canister 2: Rose Lassi — Terracotta -->
-          <div class="canister-wrap">
-            <div class="can-lid can-2"></div>
-            <div class="can-body can-2">
-              <div class="can-shine"></div>
-              <div class="can-badge can-2">For<br>50+</div>
-              <div class="can-brand">Av<em>é</em>a</div>
-              <div class="can-flavor">Rose Lassi</div>
-              <div class="can-rule can-2"></div>
-              <div class="can-protein">25g</div>
-              <div class="can-protein-sub">Protein per serving</div>
+          <!-- Pouch 2: Rose Lassi -->
+          <div class="pouch-wrap">
+            <div class="pouch pouch-2">
+              <div class="pouch-color">
+                <div class="pouch-eyebrow">Protein for 50+</div>
+                <div class="pouch-brand">Avéa</div>
+                <div class="pouch-type">Functional Protein</div>
+                <div class="pouch-divider"></div>
+              </div>
+              <div class="pouch-white">
+                <div class="pouch-flavor">Rose Lassi</div>
+                <div class="pouch-macro">25g</div>
+                <div class="pouch-macro-sub">Protein per serving</div>
+              </div>
             </div>
-            <div class="can-base can-2"></div>
-            <div class="can-label">Rose Lassi</div>
           </div>
 
-          <!-- Canister 3: Natural Vanilla — Ivory -->
-          <div class="canister-wrap">
-            <div class="can-lid can-3"></div>
-            <div class="can-body can-3">
-              <div class="can-shine"></div>
-              <div class="can-badge can-3">For<br>50+</div>
-              <div class="can-brand">Av<em>é</em>a</div>
-              <div class="can-flavor">Natural Vanilla</div>
-              <div class="can-rule can-3"></div>
-              <div class="can-protein">25g</div>
-              <div class="can-protein-sub">Protein per serving</div>
+          <!-- Pouch 3: Natural Vanilla -->
+          <div class="pouch-wrap">
+            <div class="pouch pouch-3">
+              <div class="pouch-color">
+                <div class="pouch-eyebrow">Protein for 50+</div>
+                <div class="pouch-brand">Avéa</div>
+                <div class="pouch-type">Functional Protein</div>
+                <div class="pouch-divider"></div>
+              </div>
+              <div class="pouch-white">
+                <div class="pouch-flavor">Natural Vanilla</div>
+                <div class="pouch-macro">25g</div>
+                <div class="pouch-macro-sub">Protein per serving</div>
+              </div>
             </div>
-            <div class="can-base can-3"></div>
-            <div class="can-label">Natural Vanilla</div>
           </div>
 
         </div>
