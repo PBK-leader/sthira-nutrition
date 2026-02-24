@@ -175,7 +175,25 @@
     }
     .logo em { font-style: normal; color: var(--amber); }
 
-    .nav-btn { font-size: 0.9rem; padding: 11px 24px; }
+    .nav-btn {
+      font-size: 0.94rem;
+      padding: 13px 30px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 18px rgba(200,98,42,0.32);
+    }
+
+    @keyframes btn-glow {
+      0%, 100% { box-shadow: 0 4px 20px rgba(200,98,42,0.30); }
+      50%       { box-shadow: 0 8px 38px rgba(200,98,42,0.60); }
+    }
+
+    .hero-ctas .btn-amber {
+      font-size: 1.08rem;
+      padding: 18px 40px;
+      font-weight: 700;
+      animation: btn-glow 2.8s ease-in-out infinite;
+    }
 
     /* =============================================
        HERO
