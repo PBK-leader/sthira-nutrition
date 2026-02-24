@@ -1292,7 +1292,7 @@
       <div class="survey-header fade">
         <div class="section-tag">Be Part of Building This</div>
         <h2>Help us create the right product for your family</h2>
-        <p>Answer 8 quick questions and get early access. Takes under 2 minutes.</p>
+        <p>Answer 9 quick questions and get early access. Takes under 2 minutes.</p>
       </div>
 
       <div class="form-card fade" id="formCard">
@@ -1308,6 +1308,7 @@
           <div class="prog-seg" id="seg7"></div>
           <div class="prog-seg" id="seg8"></div>
           <div class="prog-seg" id="seg9"></div>
+          <div class="prog-seg" id="seg10"></div>
         </div>
 
         <!-- STEP 1: Who is this for -->
@@ -1338,7 +1339,7 @@
           </div>
           <div class="step-foot">
             <span></span>
-            <span class="step-count">1 of 9</span>
+            <span class="step-count">1 of 10</span>
           </div>
         </div>
 
@@ -1365,7 +1366,7 @@
           </div>
           <div class="step-foot">
             <button class="back-btn" onclick="goBack(2)">&#8592; Back</button>
-            <span class="step-count">2 of 9</span>
+            <span class="step-count">2 of 10</span>
           </div>
         </div>
 
@@ -1397,7 +1398,7 @@
           </div>
           <div class="step-foot">
             <button class="back-btn" onclick="goBack(3)">&#8592; Back</button>
-            <span class="step-count">3 of 9</span>
+            <span class="step-count">3 of 10</span>
           </div>
         </div>
 
@@ -1429,7 +1430,7 @@
           </div>
           <div class="step-foot">
             <button class="back-btn" onclick="goBack(4)">&#8592; Back</button>
-            <span class="step-count">4 of 9</span>
+            <span class="step-count">4 of 10</span>
           </div>
         </div>
 
@@ -1456,108 +1457,150 @@
           </div>
           <div class="step-foot">
             <button class="back-btn" onclick="goBack(5)">&#8592; Back</button>
-            <span class="step-count">5 of 9</span>
+            <span class="step-count">5 of 10</span>
           </div>
         </div>
 
-        <!-- STEP 6: Barriers -->
+        <!-- STEP 6: Current brand -->
         <div class="form-step" id="step6">
+          <div class="q-text">Which protein brand do they currently use, if any?</div>
+          <div class="q-hint">Select the closest match</div>
+          <div class="opt-grid">
+            <label class="opt" data-step="6" data-field="current_brand" data-val="ensure">
+              <input type="radio" name="current_brand" value="ensure">
+              <div class="radio-ring"></div>
+              Ensure (Abbott)
+            </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="protinex">
+              <input type="radio" name="current_brand" value="protinex">
+              <div class="radio-ring"></div>
+              Protinex (Danone)
+            </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="horlicks">
+              <input type="radio" name="current_brand" value="horlicks">
+              <div class="radio-ring"></div>
+              Horlicks Protein+
+            </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="muscleblaze">
+              <input type="radio" name="current_brand" value="muscleblaze">
+              <div class="radio-ring"></div>
+              MuscleBlaze
+            </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="oziva">
+              <input type="radio" name="current_brand" value="oziva">
+              <div class="radio-ring"></div>
+              Oziva
+            </label>
+            <label class="opt" data-step="6" data-field="current_brand" data-val="none">
+              <input type="radio" name="current_brand" value="none">
+              <div class="radio-ring"></div>
+              None of the above
+            </label>
+          </div>
+          <div class="step-foot">
+            <button class="back-btn" onclick="goBack(6)">&#8592; Back</button>
+            <span class="step-count">6 of 10</span>
+          </div>
+        </div>
+
+        <!-- STEP 7: Barriers -->
+        <div class="form-step" id="step7">
           <div class="q-text">What might stop you from trying a protein supplement?</div>
           <div class="q-hint">Your concern helps us design around it</div>
           <div class="opt-grid">
-            <label class="opt" data-step="6" data-field="barrier" data-val="safety">
+            <label class="opt" data-step="7" data-field="barrier" data-val="safety">
               <input type="radio" name="barrier" value="safety">
               <div class="radio-ring"></div>
               Concerned it might not be safe for their age
             </label>
-            <label class="opt" data-step="6" data-field="barrier" data-val="ingredients">
+            <label class="opt" data-step="7" data-field="barrier" data-val="ingredients">
               <input type="radio" name="barrier" value="ingredients">
               <div class="radio-ring"></div>
               Worried about artificial ingredients or chemicals
             </label>
-            <label class="opt" data-step="6" data-field="barrier" data-val="habit">
+            <label class="opt" data-step="7" data-field="barrier" data-val="habit">
               <input type="radio" name="barrier" value="habit">
               <div class="radio-ring"></div>
               Not sure they'd stick to it every day
             </label>
-            <label class="opt" data-step="6" data-field="barrier" data-val="taste">
+            <label class="opt" data-step="7" data-field="barrier" data-val="taste">
               <input type="radio" name="barrier" value="taste">
               <div class="radio-ring"></div>
               Taste or texture might be off
             </label>
           </div>
           <div class="step-foot">
-            <button class="back-btn" onclick="goBack(6)">&#8592; Back</button>
-            <span class="step-count">6 of 9</span>
+            <button class="back-btn" onclick="goBack(7)">&#8592; Back</button>
+            <span class="step-count">7 of 10</span>
           </div>
         </div>
 
-        <!-- STEP 7: Price sensitivity -->
-        <div class="form-step" id="step7">
+        <!-- STEP 8: Price sensitivity -->
+        <div class="form-step" id="step8">
           <div class="q-text">What price feels fair for a month's supply?</div>
           <div class="q-hint">This shapes everything from formulation to packaging</div>
           <div class="opt-grid">
-            <label class="opt" data-step="7" data-field="price_range" data-val="under-1000">
+            <label class="opt" data-step="8" data-field="price_range" data-val="under-1000">
               <input type="radio" name="price_range" value="under-1000">
               <div class="radio-ring"></div>
               Under &#x20B9;1,000 / month
             </label>
-            <label class="opt" data-step="7" data-field="price_range" data-val="1000-1500">
+            <label class="opt" data-step="8" data-field="price_range" data-val="1000-1500">
               <input type="radio" name="price_range" value="1000-1500">
               <div class="radio-ring"></div>
               &#x20B9;1,000 – &#x20B9;1,500 / month
             </label>
-            <label class="opt" data-step="7" data-field="price_range" data-val="1500-2000">
+            <label class="opt" data-step="8" data-field="price_range" data-val="1500-2000">
               <input type="radio" name="price_range" value="1500-2000">
               <div class="radio-ring"></div>
               &#x20B9;1,500 – &#x20B9;2,000 / month
             </label>
-            <label class="opt" data-step="7" data-field="price_range" data-val="above-2000">
+            <label class="opt" data-step="8" data-field="price_range" data-val="above-2000">
               <input type="radio" name="price_range" value="above-2000">
               <div class="radio-ring"></div>
               &#x20B9;2,000+ if the quality is right
             </label>
           </div>
           <div class="step-foot">
-            <button class="back-btn" onclick="goBack(7)">&#8592; Back</button>
-            <span class="step-count">7 of 9</span>
+            <button class="back-btn" onclick="goBack(8)">&#8592; Back</button>
+            <span class="step-count">8 of 10</span>
           </div>
         </div>
 
-        <!-- STEP 8: Purchase channel -->
-        <div class="form-step" id="step8">
+        <!-- STEP 9: Purchase channel -->
+        <div class="form-step" id="step9">
           <div class="q-text">Where would you prefer to buy it?</div>
           <div class="q-hint">We'll prioritise the channel you trust most</div>
           <div class="opt-grid">
-            <label class="opt" data-step="8" data-field="buy_channel" data-val="amazon">
+            <label class="opt" data-step="9" data-field="buy_channel" data-val="amazon">
               <input type="radio" name="buy_channel" value="amazon">
               <div class="radio-ring"></div>
               Amazon or Flipkart
             </label>
-            <label class="opt" data-step="8" data-field="buy_channel" data-val="direct">
+            <label class="opt" data-step="9" data-field="buy_channel" data-val="direct">
               <input type="radio" name="buy_channel" value="direct">
               <div class="radio-ring"></div>
               Brand's own website (direct)
             </label>
-            <label class="opt" data-step="8" data-field="buy_channel" data-val="pharmacy">
+            <label class="opt" data-step="9" data-field="buy_channel" data-val="pharmacy">
               <input type="radio" name="buy_channel" value="pharmacy">
               <div class="radio-ring"></div>
               Local pharmacy or medical store
             </label>
-            <label class="opt" data-step="8" data-field="buy_channel" data-val="qcommerce">
+            <label class="opt" data-step="9" data-field="buy_channel" data-val="qcommerce">
               <input type="radio" name="buy_channel" value="qcommerce">
               <div class="radio-ring"></div>
               BigBasket, Blinkit, or Zepto
             </label>
           </div>
           <div class="step-foot">
-            <button class="back-btn" onclick="goBack(8)">&#8592; Back</button>
-            <span class="step-count">8 of 9</span>
+            <button class="back-btn" onclick="goBack(9)">&#8592; Back</button>
+            <span class="step-count">9 of 10</span>
           </div>
         </div>
 
-        <!-- STEP 9: Contact capture -->
-        <div class="form-step" id="step9">
+        <!-- STEP 10: Contact capture -->
+        <div class="form-step" id="step10">
           <div class="q-text">Almost done — where should we reach you?</div>
           <div class="q-hint">We'll notify you first when Avéa launches. No spam, ever.</div>
 
@@ -1569,6 +1612,7 @@
             <input type="hidden" name="perception" id="h_perception">
             <input type="hidden" name="health_concern" id="h_health_concern">
             <input type="hidden" name="current_supplement" id="h_current_supplement">
+            <input type="hidden" name="current_brand" id="h_current_brand">
             <input type="hidden" name="barrier" id="h_barrier">
             <input type="hidden" name="price_range" id="h_price_range">
             <input type="hidden" name="buy_channel" id="h_buy_channel">
@@ -1630,8 +1674,8 @@
           </form>
 
           <div class="step-foot">
-            <button class="back-btn" onclick="goBack(9)">&#8592; Back</button>
-            <span class="step-count">9 of 9</span>
+            <button class="back-btn" onclick="goBack(10)">&#8592; Back</button>
+            <span class="step-count">10 of 10</span>
           </div>
         </div>
 
@@ -1705,7 +1749,7 @@
   });
 
   function goToStep(target) {
-    if (target > 9) return;
+    if (target > 10) return;
     document.getElementById('step' + currentStep).classList.remove('active');
     currentStep = target;
     document.getElementById('step' + currentStep).classList.add('active');
@@ -1718,7 +1762,7 @@
   }
 
   function updateProgress() {
-    for (var i = 1; i <= 9; i++) {
+    for (var i = 1; i <= 10; i++) {
       var seg = document.getElementById('seg' + i);
       seg.className = 'prog-seg';
       if (i < currentStep) seg.classList.add('done');
@@ -1738,6 +1782,7 @@
     document.getElementById('h_perception').value        = answers['perception']         || '';
     document.getElementById('h_health_concern').value    = answers['health_concern']     || '';
     document.getElementById('h_current_supplement').value= answers['current_supplement'] || '';
+    document.getElementById('h_current_brand').value    = answers['current_brand']      || '';
     document.getElementById('h_barrier').value           = answers['barrier']            || '';
     document.getElementById('h_price_range').value       = answers['price_range']        || '';
     document.getElementById('h_buy_channel').value       = answers['buy_channel']        || '';
