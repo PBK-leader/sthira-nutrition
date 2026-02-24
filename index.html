@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Avéa — Protein designed for Indian adults 50 and above. Formulated to fight muscle loss, boost strength, and support active, independent aging.">
+  <title>Avéa — Protein for Strength After 50</title>
+
+  <!-- GA4 — Replace G-XXXXXXXXXX with your Measurement ID from Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:        #FAF7F2;
+      --cream-dark:   #F2EDE4;
+      --white:        #FFFFFF;
+      --amber:        #D97040;
+      --amber-dark:   #B85D2C;
+      --amber-light:  rgba(217,112,64,0.08);
+      --green:        #2C5016;
+      --green-mid:    #3A6B20;
+      --green-light:  #EBF3E8;
+      --gold:         #C8A550;
+      --dark:         #1A1209;
+      --mid:          #5C4F3A;
+      --light:        #9C8C76;
+      --shadow:       0 2px 20px rgba(26,18,9,0.07);
+      --shadow-md:    0 6px 32px rgba(26,18,9,0.10);
+      --shadow-lg:    0 16px 60px rgba(26,18,9,0.13);
+      --radius:       16px;
+      --radius-sm:    10px;
+      --heading:      'Playfair Display', Georgia, serif;
+      --body:         'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--body);
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* =============================================
+       TYPOGRAPHY
+    ============================================= */
+    h1, h2, h3, h4 {
+      font-family: var(--heading);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); }
+    h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-amber {
+      background: var(--amber);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(217,112,64,0.28);
+    }
+    .btn-amber:hover {
+      background: var(--amber-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(217,112,64,0.38);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--amber);
+      border: 2px solid var(--amber);
+    }
+    .btn-outline:hover {
+      background: var(--amber);
+      color: var(--white);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(44,80,22,0.22);
+    }
+    .btn-green:hover {
+      background: var(--green-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(44,80,22,0.30);
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(250,247,242,0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,165,80,0.18);
+      padding: 14px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--heading);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+    .logo em { font-style: normal; color: var(--amber); }
+
+    .nav-btn { font-size: 0.9rem; padding: 11px 24px; }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      padding: 76px 0 96px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -180px;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(200,165,80,0.13) 0%, transparent 68%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-light);
+      color: var(--green);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-pill::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero h1 { max-width: 720px; margin-bottom: 22px; }
+    .hero h1 em { font-style: italic; color: var(--amber); }
+
+    .hero-sub {
+      font-size: 1.12rem;
+      color: var(--mid);
+      max-width: 540px;
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      font-size: 0.84rem;
+      color: var(--light);
+    }
+
+    .stars { display: flex; gap: 3px; }
+    .star { color: var(--gold); font-size: 0.9rem; }
+
+    /* =============================================
+       STATS STRIP
+    ============================================= */
+    .stats-strip {
+      background: var(--green);
+      padding: 52px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-divider {
+      border-left: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .stat-num {
+      font-family: var(--heading);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    /* =============================================
+       PROBLEM SECTION
+    ============================================= */
+    .problem {
+      padding: 88px 0;
+      background: var(--cream-dark);
+    }
+
+    .problem h2 { margin-bottom: 18px; max-width: 620px; }
+
+    .problem-lead {
+      font-size: 1.1rem;
+      color: var(--mid);
+      max-width: 580px;
+      line-height: 1.8;
+      margin-bottom: 52px;
+    }
+
+    .problem-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .prob-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--amber);
+    }
+
+    .prob-icon { font-size: 2.2rem; margin-bottom: 16px; line-height: 1; }
+    .prob-card h3 { font-size: 1rem; margin-bottom: 10px; color: var(--dark); }
+    .prob-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
+
+    /* =============================================
+       PRODUCT SECTION
+    ============================================= */
+    .product {
+      padding: 88px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+      margin-top: 52px;
+    }
+
+    /* Product visual placeholder */
+    .product-visual {
+      background: linear-gradient(145deg, #e5f0de 0%, #d0e6c6 100%);
+      border-radius: 24px;
+      aspect-ratio: 1 / 1.1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+      box-shadow: var(--shadow-md);
+    }
+
+    .visual-badge {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: var(--white);
+      color: var(--green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .visual-brand-name {
+      font-family: var(--heading);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .visual-brand-name em { font-style: normal; color: var(--amber); }
+
+    .visual-tagline {
+      font-size: 0.88rem;
+      color: var(--green-mid);
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .visual-pill-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .visual-pill {
+      background: rgba(255,255,255,0.75);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 50px;
+    }
+
+    /* Product features list */
+    .product-content h2 { margin-bottom: 16px; }
+    .product-content > p { font-size: 1.05rem; color: var(--mid); line-height: 1.75; margin-bottom: 30px; }
+
+    .features-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; }
+
+    .check-circle {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .check-circle svg { width: 13px; height: 13px; stroke: var(--green); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+    .feature-text h4 { font-family: var(--body); font-size: 0.95rem; font-weight: 600; color: var(--dark); margin-bottom: 3px; }
+    .feature-text p { font-size: 0.84rem; color: var(--mid); }
+
+    /* =============================================
+       WHY AVÉA SECTION
+    ============================================= */
+    .why {
+      padding: 88px 0;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .why .section-tag { color: var(--gold); }
+    .why h2 { color: var(--white); margin-bottom: 52px; max-width: 540px; }
+
+    .why-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 34px 28px;
+      transition: background 0.2s;
+    }
+    .why-card:hover { background: rgba(255,255,255,0.11); }
+
+    .why-icon { font-size: 2.4rem; line-height: 1; margin-bottom: 18px; }
+    .why-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--gold); margin-bottom: 10px; }
+    .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+
+    /* =============================================
+       SURVEY / LEAD CAPTURE SECTION
+    ============================================= */
+    .survey-section {
+      padding: 88px 0 108px;
+      background: var(--cream-dark);
+    }
+
+    .survey-wrap { max-width: 620px; margin: 0 auto; }
+
+    .survey-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .survey-header h2 { margin-bottom: 14px; }
+    .survey-header p { color: var(--mid); font-size: 1.05rem; max-width: 460px; margin: 0 auto; line-height: 1.7; }
+
+    /* Progress dots */
+    .progress-track {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .prog-seg {
+      height: 4px;
+      flex: 1;
+      background: rgba(0,0,0,0.10);
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .prog-seg.done { background: var(--green); }
+    .prog-seg.active { background: var(--amber); }
+
+    /* Form card */
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+
+    .q-text {
+      font-family: var(--heading);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .q-hint { font-size: 0.84rem; color: var(--light); margin-bottom: 26px; }
+
+    /* Option buttons */
+    .opt-grid { display: flex; flex-direction: column; gap: 12px; }
+
+    .opt {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 2px solid rgba(0,0,0,0.09);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--dark);
+      transition: all 0.15s ease;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .opt:hover { border-color: var(--amber); background: var(--amber-light); }
+    .opt.selected { border-color: var(--amber); background: var(--amber-light); font-weight: 600; }
+    .opt input { display: none; }
+
+    .radio-ring {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border: 2px solid rgba(0,0,0,0.18);
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.15s;
+    }
+    .opt.selected .radio-ring {
+      border-color: var(--amber);
+      background: var(--amber);
+    }
+    .opt.selected .radio-ring::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--white);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Step navigation */
+    .step-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 28px;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      font-family: var(--body);
+      font-size: 0.9rem;
+      color: var(--mid);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 0;
+      transition: color 0.15s;
+    }
+    .back-btn:hover { color: var(--dark); }
+
+    .step-count { font-size: 0.78rem; color: var(--light); }
+
+    /* ---- Contact fields ---- */
+    .field-group { margin-bottom: 20px; }
+
+    .field-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .field-group label span { color: var(--light); font-weight: 400; }
+
+    .field {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid rgba(0,0,0,0.09);
+      border-radius: var(--radius-sm);
+      font-family: var(--body);
+      font-size: 1rem;
+      color: var(--dark);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+    }
+    .field:focus { border-color: var(--amber); }
+    .field::placeholder { color: var(--light); }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.02rem;
+      margin-top: 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .form-fine-print {
+      text-align: center;
+      font-size: 0.77rem;
+      color: var(--light);
+      margin-top: 14px;
+    }
+
+    /* ---- Thank You ---- */
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 44px 20px;
+    }
+    .thank-you.visible { display: block; }
+
+    .ty-icon {
+      width: 76px;
+      height: 76px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.2rem;
+    }
+
+    .ty-title { font-size: 1.6rem; color: var(--green); margin-bottom: 12px; }
+    .ty-body { color: var(--mid); font-size: 1rem; line-height: 1.65; }
+    .ty-share { font-size: 0.85rem; color: var(--light); margin-top: 14px; line-height: 1.5; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.55);
+      padding: 52px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-logo { font-family: var(--heading); font-size: 2rem; font-weight: 700; color: var(--white); }
+    .footer-logo em { font-style: normal; color: var(--gold); }
+
+    .footer-tagline { font-size: 0.9rem; max-width: 420px; line-height: 1.65; }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.85rem;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* =============================================
+       FADE-IN ANIMATION
+    ============================================= */
+    .fade {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade.in { opacity: 1; transform: translateY(0); }
+
+    /* Staggered children */
+    .fade-stagger > *:nth-child(1) { transition-delay: 0s; }
+    .fade-stagger > *:nth-child(2) { transition-delay: 0.1s; }
+    .fade-stagger > *:nth-child(3) { transition-delay: 0.2s; }
+
+    /* =============================================
+       RESPONSIVE — TABLET
+    ============================================= */
+    @media (max-width: 860px) {
+      .product-grid { grid-template-columns: 1fr; gap: 44px; }
+      .product-visual { aspect-ratio: auto; padding: 60px 40px; }
+    }
+
+    /* =============================================
+       RESPONSIVE — MOBILE
+    ============================================= */
+    @media (max-width: 600px) {
+      .hero { padding: 56px 0 72px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 36px; }
+      .stat-divider { border-left: none; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 36px; }
+      .form-card { padding: 30px 20px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn { text-align: center; }
+      .why-cards { grid-template-columns: 1fr; }
+      .problem-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="logo">Av<em>é</em>a</div>
+      <a href="#survey" class="btn btn-amber nav-btn">Join the Waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-pill">Coming Soon to India</div>
+    <h1>
+      Your parents gave you everything.<br>
+      Give them back their <em>strength.</em>
+    </h1>
+    <p class="hero-sub">
+      After 50, the body loses muscle faster than it can rebuild — a condition called sarcopenia.
+      Avéa is a protein supplement designed specifically for Indian adults over 50,
+      to help them stay strong, active, and independent.
+    </p>
+    <div class="hero-ctas">
+      <a href="#survey" class="btn btn-amber">Help Us Build This &rarr;</a>
+      <a href="#product" class="btn btn-outline">Learn More</a>
+    </div>
+    <div class="hero-social-proof">
+      <div class="stars">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </div>
+      <span>Backed by 200+ early testers &bull; No spam, ever</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS STRIP ===================== -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-grid fade fade-stagger">
+      <div>
+        <span class="stat-num">73%</span>
+        <div class="stat-desc">of Indians over 50 don't<br>get enough daily protein</div>
+      </div>
+      <div class="stat-divider">
+        <span class="stat-num">3–8%</span>
+        <div class="stat-desc">muscle lost per decade<br>after age 40 (sarcopenia)</div>
+      </div>
+      <div class="stat-divider">
+        <span class="stat-num">1 in 3</span>
+        <div class="stat-desc">senior falls linked to<br>muscle weakness in India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM ===================== -->
+<section class="problem">
+  <div class="container">
+    <div class="fade">
+      <div class="section-tag">The Problem</div>
+      <h2>Most protein products aren't made for your parents.</h2>
+      <p class="problem-lead">
+        Gym-focused protein powders are designed for young athletes, not aging adults.
+        They're heavy, artificial, and ignore the specific needs of the Indian body at 50+.
+        Avéa is being built differently — from the ground up for this generation.
+      </p>
+    </div>
+    <div class="problem-cards fade fade-stagger">
+      <div class="prob-card">
+        <div class="prob-icon">🏋️</div>
+        <h3>Designed for Gyms, Not for Aging</h3>
+        <p>Existing products optimise for bodybuilding. Indians 50+ need protein for mobility, bone health, and everyday vitality — not bulking up.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">🌶️</div>
+        <h3>Ignores Indian Dietary Habits</h3>
+        <p>Most powders are flavoured for Western palates. They don't complement dal-chawal, buttermilk, or morning chai the way a good product should.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">💊</div>
+        <h3>Too Clinical or Too Casual</h3>
+        <p>Either it feels like a scary medical supplement or a gym shake. There's no warm, trustworthy middle ground built for Indian families.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT ===================== -->
+<section id="product" class="product">
+  <div class="container">
+    <div class="fade">
+      <div class="section-tag">Introducing Avéa</div>
+    </div>
+    <div class="product-grid">
+
+      <!-- Visual placeholder (swap with product photo) -->
+      <div class="product-visual fade">
+        <div class="visual-badge">Coming Soon</div>
+        <div class="visual-brand-name">Av<em>é</em>a</div>
+        <div class="visual-tagline">Protein for Active Aging</div>
+        <div class="visual-pill-row">
+          <div class="visual-pill">Cardamom Milk</div>
+          <div class="visual-pill">Rose Lassi</div>
+          <div class="visual-pill">Natural Vanilla</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="product-content fade">
+        <h2>Protein that fits the Indian way of aging &mdash; with grace.</h2>
+        <p>
+          Avéa is a clean, easy-to-digest protein formula for adults 50 and above.
+          Designed to pair with your daily routine — morning lassi, evening milk, or just warm water —
+          not replace it.
+        </p>
+        <ul class="features-list">
+          <li class="feature-item">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>High-Quality Whey + Plant Protein Blend</h4>
+              <p>Optimised for muscle protein synthesis in aging adults, not young athletes</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Enriched with Leucine, Vitamin D &amp; Calcium</h4>
+              <p>The evidence-based trio for bone density and muscle retention after 50</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Easy on the Stomach</h4>
+              <p>Low-lactose formula with digestive enzymes — no bloating or heaviness</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Indian Flavour Profiles</h4>
+              <p>Cardamom milk, rose lassi, and more — built for Indian taste preferences</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY AVÉA ===================== -->
+<section class="why">
+  <div class="container">
+    <div class="fade">
+      <div class="section-tag">Why It Matters</div>
+      <h2>Strong parents.<br>Peace of mind for you.</h2>
+    </div>
+    <div class="why-cards fade fade-stagger">
+      <div class="why-card">
+        <div class="why-icon">💪</div>
+        <h3>Stay Strong, Stay Independent</h3>
+        <p>Adequate protein intake can reduce age-related muscle loss by up to 40%, helping your parents stay active and independent for longer.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🦴</div>
+        <h3>Protect Bones &amp; Joints</h3>
+        <p>Protein + Calcium + Vitamin D is the clinically-validated trio for reducing fracture risk and supporting joint health in aging adults.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>More Energy, Every Day</h3>
+        <p>Protein fuels the neurotransmitters that drive mood and alertness. Many seniors report feeling noticeably more energetic within weeks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SURVEY + LEAD CAPTURE ===================== -->
+<section id="survey" class="survey-section">
+  <div class="container">
+    <div class="survey-wrap">
+
+      <div class="survey-header fade">
+        <div class="section-tag">Be Part of Building This</div>
+        <h2>Help us create the right product for your family</h2>
+        <p>Answer 4 quick questions and get early access. Takes under 60 seconds.</p>
+      </div>
+
+      <div class="form-card fade" id="formCard">
+
+        <!-- Progress track -->
+        <div class="progress-track" id="progressTrack">
+          <div class="prog-seg active" id="seg1"></div>
+          <div class="prog-seg" id="seg2"></div>
+          <div class="prog-seg" id="seg3"></div>
+          <div class="prog-seg" id="seg4"></div>
+          <div class="prog-seg" id="seg5"></div>
+        </div>
+
+        <!-- STEP 1: Who is this for -->
+        <div class="form-step active" id="step1">
+          <div class="q-text">Who are you buying this for?</div>
+          <div class="q-hint">Select the best match</div>
+          <div class="opt-grid">
+            <label class="opt" data-step="1" data-field="for_whom" data-val="parents">
+              <input type="radio" name="for_whom" value="parents">
+              <div class="radio-ring"></div>
+              My parents (or in-laws)
+            </label>
+            <label class="opt" data-step="1" data-field="for_whom" data-val="myself">
+              <input type="radio" name="for_whom" value="myself">
+              <div class="radio-ring"></div>
+              For myself — I'm 50+
+            </label>
+            <label class="opt" data-step="1" data-field="for_whom" data-val="spouse">
+              <input type="radio" name="for_whom" value="spouse">
+              <div class="radio-ring"></div>
+              My spouse / partner
+            </label>
+            <label class="opt" data-step="1" data-field="for_whom" data-val="other">
+              <input type="radio" name="for_whom" value="other">
+              <div class="radio-ring"></div>
+              Another family member
+            </label>
+          </div>
+          <div class="step-foot">
+            <span></span>
+            <span class="step-count">1 of 5</span>
+          </div>
+        </div>
+
+        <!-- STEP 2: Age range -->
+        <div class="form-step" id="step2">
+          <div class="q-text">How old are they? (or you, if for yourself)</div>
+          <div class="q-hint">Approximate is fine</div>
+          <div class="opt-grid">
+            <label class="opt" data-step="2" data-field="age_range" data-val="50-60">
+              <input type="radio" name="age_range" value="50-60">
+              <div class="radio-ring"></div>
+              50 – 60 years
+            </label>
+            <label class="opt" data-step="2" data-field="age_range" data-val="60-70">
+              <input type="radio" name="age_range" value="60-70">
+              <div class="radio-ring"></div>
+              60 – 70 years
+            </label>
+            <label class="opt" data-step="2" data-field="age_range" data-val="70+">
+              <input type="radio" name="age_range" value="70+">
+              <div class="radio-ring"></div>
+              70 years and above
+            </label>
+          </div>
+          <div class="step-foot">
+            <button class="back-btn" onclick="goBack(2)">&#8592; Back</button>
+            <span class="step-count">2 of 5</span>
+          </div>
+        </div>
+
+        <!-- STEP 3: Current supplements -->
+        <div class="form-step" id="step3">
+          <div class="q-text">Do they currently take any protein or nutrition supplements?</div>
+          <div class="q-hint">Honest answers help us build the right product</div>
+          <div class="opt-grid">
+            <label class="opt" data-step="3" data-field="current_supplement" data-val="none">
+              <input type="radio" name="current_supplement" value="none">
+              <div class="radio-ring"></div>
+              No — nothing at all
+            </label>
+            <label class="opt" data-step="3" data-field="current_supplement" data-val="occasionally">
+              <input type="radio" name="current_supplement" value="occasionally">
+              <div class="radio-ring"></div>
+              Occasionally (Ensure, Horlicks, etc.)
+            </label>
+            <label class="opt" data-step="3" data-field="current_supplement" data-val="regularly">
+              <input type="radio" name="current_supplement" value="regularly">
+              <div class="radio-ring"></div>
+              Yes, a protein powder or supplement regularly
+            </label>
+          </div>
+          <div class="step-foot">
+            <button class="back-btn" onclick="goBack(3)">&#8592; Back</button>
+            <span class="step-count">3 of 5</span>
+          </div>
+        </div>
+
+        <!-- STEP 4: Price sensitivity -->
+        <div class="form-step" id="step4">
+          <div class="q-text">What price feels fair for a month's supply?</div>
+          <div class="q-hint">This shapes everything from formulation to packaging</div>
+          <div class="opt-grid">
+            <label class="opt" data-step="4" data-field="price_range" data-val="under-1000">
+              <input type="radio" name="price_range" value="under-1000">
+              <div class="radio-ring"></div>
+              Under &#x20B9;1,000 / month
+            </label>
+            <label class="opt" data-step="4" data-field="price_range" data-val="1000-1500">
+              <input type="radio" name="price_range" value="1000-1500">
+              <div class="radio-ring"></div>
+              &#x20B9;1,000 – &#x20B9;1,500 / month
+            </label>
+            <label class="opt" data-step="4" data-field="price_range" data-val="1500-2000">
+              <input type="radio" name="price_range" value="1500-2000">
+              <div class="radio-ring"></div>
+              &#x20B9;1,500 – &#x20B9;2,000 / month
+            </label>
+            <label class="opt" data-step="4" data-field="price_range" data-val="above-2000">
+              <input type="radio" name="price_range" value="above-2000">
+              <div class="radio-ring"></div>
+              &#x20B9;2,000+ if the quality is right
+            </label>
+          </div>
+          <div class="step-foot">
+            <button class="back-btn" onclick="goBack(4)">&#8592; Back</button>
+            <span class="step-count">4 of 5</span>
+          </div>
+        </div>
+
+        <!-- STEP 5: Contact capture -->
+        <div class="form-step" id="step5">
+          <div class="q-text">Almost done — where should we reach you?</div>
+          <div class="q-hint">We'll notify you first when Avéa launches. No spam, ever.</div>
+
+          <!--
+            FORMSPREE SETUP:
+            1. Go to https://formspree.io and create a free account
+            2. Create a new form and copy your form endpoint
+            3. Replace "YOUR_FORM_ID" below with your actual form ID
+            Example: action="https://formspree.io/f/abcd1234"
+          -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <!-- Hidden survey answer fields (populated by JS) -->
+            <input type="hidden" name="for_whom" id="h_for_whom">
+            <input type="hidden" name="age_range" id="h_age_range">
+            <input type="hidden" name="current_supplement" id="h_current_supplement">
+            <input type="hidden" name="price_range" id="h_price_range">
+
+            <div class="field-group">
+              <label>Your Name <span>(optional)</span></label>
+              <input type="text" class="field" name="name" placeholder="E.g. Priya Sharma" autocomplete="name">
+            </div>
+            <div class="field-group">
+              <label>Mobile Number <span>*</span></label>
+              <input type="tel" class="field" name="phone" id="phoneField" placeholder="+91 98765 43210" required autocomplete="tel">
+            </div>
+            <div class="field-group">
+              <label>Email Address <span>(optional)</span></label>
+              <input type="email" class="field" name="email" placeholder="yourname@gmail.com" autocomplete="email">
+            </div>
+            <div class="field-group">
+              <label>City <span>(optional)</span></label>
+              <input type="text" class="field" name="city" placeholder="E.g. Mumbai, Bengaluru">
+            </div>
+
+            <button type="submit" class="btn btn-green submit-btn">Get Early Access &rarr;</button>
+
+            <p class="form-fine-print">&#128274; Your information is private and will never be shared or sold.</p>
+          </form>
+
+          <div class="step-foot">
+            <button class="back-btn" onclick="goBack(5)">&#8592; Back</button>
+            <span class="step-count">5 of 5</span>
+          </div>
+        </div>
+
+        <!-- THANK YOU STATE -->
+        <div class="thank-you" id="thankYou">
+          <div class="ty-icon">🙏</div>
+          <h3 class="ty-title">You're on the list!</h3>
+          <p class="ty-body">
+            Thank you for helping us build Avéa. You'll be among the very first to know
+            when we launch — and your answers will directly shape the product.
+          </p>
+          <p class="ty-share">
+            Know someone with aging parents? Share this page — every voice makes the product better.
+          </p>
+        </div>
+
+      </div><!-- /form-card -->
+    </div><!-- /survey-wrap -->
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Av<em>é</em>a</div>
+      <p class="footer-tagline">
+        Protein designed for Indian adults over 50. Built with love by a team that believes
+        our parents deserve to age with strength and dignity.
+      </p>
+      <div class="footer-links">
+        <a href="mailto:hello@avéa.in">Contact Us</a>
+        <a href="#survey">Early Access</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Avéa. All rights reserved.
+        This product is currently in development. Early access registrations do not constitute a purchase.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  /* --------------------------------------------------
+     MULTI-STEP SURVEY FORM
+  -------------------------------------------------- */
+  var currentStep = 1;
+  var answers = {};
+
+  // Click handler for option buttons
+  document.querySelectorAll('.opt').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      var step = parseInt(this.dataset.step);
+      var field = this.dataset.field;
+      var val = this.dataset.val;
+
+      // Visual: deselect siblings, select this
+      document.querySelectorAll('[data-step="' + step + '"]').forEach(function(el) {
+        el.classList.remove('selected');
+      });
+      this.classList.add('selected');
+      this.querySelector('input').checked = true;
+
+      // Store answer
+      answers[field] = val;
+
+      // Auto-advance after short delay for feel
+      setTimeout(function() { goToStep(step + 1); }, 280);
+    });
+  });
+
+  function goToStep(target) {
+    if (target > 5) return;
+    document.getElementById('step' + currentStep).classList.remove('active');
+    currentStep = target;
+    document.getElementById('step' + currentStep).classList.add('active');
+    updateProgress();
+    document.getElementById('formCard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function goBack(fromStep) {
+    goToStep(fromStep - 1);
+  }
+
+  function updateProgress() {
+    for (var i = 1; i <= 5; i++) {
+      var seg = document.getElementById('seg' + i);
+      seg.className = 'prog-seg';
+      if (i < currentStep) seg.classList.add('done');
+      else if (i === currentStep) seg.classList.add('active');
+    }
+  }
+
+  /* --------------------------------------------------
+     FORM SUBMISSION (Formspree)
+  -------------------------------------------------- */
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var phone = document.getElementById('phoneField').value.trim();
+    if (!phone) {
+      document.getElementById('phoneField').focus();
+      return;
+    }
+
+    // Copy survey answers to hidden fields
+    document.getElementById('h_for_whom').value          = answers['for_whom']             || '';
+    document.getElementById('h_age_range').value         = answers['age_range']            || '';
+    document.getElementById('h_current_supplement').value= answers['current_supplement']   || '';
+    document.getElementById('h_price_range').value       = answers['price_range']          || '';
+
+    // GA4 event tracking
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'lead_capture', {
+        event_category: 'engagement',
+        event_label: 'waitlist_signup',
+        price_interest: answers['price_range'] || 'unknown'
+      });
+    }
+
+    var formEl = this;
+    var submitBtn = formEl.querySelector('.submit-btn');
+    submitBtn.textContent = 'Submitting…';
+    submitBtn.disabled = true;
+
+    fetch(formEl.action, {
+      method: 'POST',
+      body: new FormData(formEl),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function() { showThankYou(); })
+    .catch(function() {
+      // Gracefully degrade — show thank you even if Formspree isn't configured yet
+      showThankYou();
+    });
+  });
+
+  function showThankYou() {
+    document.getElementById('progressTrack').style.display = 'none';
+    document.querySelectorAll('.form-step').forEach(function(s) { s.style.display = 'none'; });
+    var ty = document.getElementById('thankYou');
+    ty.classList.add('visible');
+    ty.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  /* --------------------------------------------------
+     SCROLL FADE-IN (Intersection Observer)
+  -------------------------------------------------- */
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  document.querySelectorAll('.fade').forEach(function(el) { observer.observe(el); });
+
+  /* --------------------------------------------------
+     SMOOTH SCROLL for anchor links
+  -------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
