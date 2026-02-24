@@ -918,75 +918,126 @@
     .pouch {
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 8px 32px rgba(14,26,8,0.13);
+      box-shadow: 0 10px 36px rgba(14,26,8,0.15);
       display: flex;
       flex-direction: column;
       height: 100%;
     }
 
+    /* ── Color zone (top ~65%) ── */
     .pouch-color {
       flex: 1;
-      padding: 26px 18px 20px;
+      padding: 20px 16px 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 220px;
     }
-    .pouch-eyebrow {
-      font-size: 0.55rem;
+    .pouch-brand-sm {
+      font-family: var(--heading);
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    .pouch-name {
+      font-family: var(--heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .pouch-subtitle {
+      font-size: 0.52rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
       margin-bottom: 10px;
     }
-    .pouch-brand {
-      font-family: var(--heading);
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      color: #fff;
+    .pouch-wave {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.2em;
+      margin-bottom: 10px;
       line-height: 1;
     }
-    .pouch-type {
-      font-size: 0.58rem;
+    .pouch-claims {
+      font-size: 0.47rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      line-height: 2;
+      margin-bottom: auto;
+      padding-bottom: 12px;
+    }
+    .pouch-flavor-bar {
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 10px 0 14px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    /* ── Bottom stats panel (earthy/parchment) ── */
+    .pouch-bottom {
+      background: #D9CCBA;
+      flex-shrink: 0;
+    }
+    .pouch-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 10px 8px;
+    }
+    .pouch-stat {
+      flex: 1;
+      text-align: center;
+    }
+    .pouch-stat-num {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #2a1f10;
+      line-height: 1;
+    }
+    .pouch-stat-label {
+      display: block;
+      font-size: 0.48rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b5a42;
+      margin-top: 3px;
+    }
+    .pouch-stat-div {
+      width: 1px;
+      height: 32px;
+      background: rgba(0,0,0,0.18);
+      flex-shrink: 0;
+    }
+    .pouch-net-wt {
+      text-align: center;
+      font-size: 0.44rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-top: 7px;
-    }
-    .pouch-divider {
-      height: 1px;
-      background: rgba(255,255,255,0.18);
-      margin: 16px 0 0;
+      color: #8a7560;
+      padding: 0 10px 10px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding-top: 6px;
     }
 
-    .pouch-white {
-      background: #fff;
-      padding: 14px 18px 18px;
-    }
-    .pouch-flavor {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 5px;
-    }
-    .pouch-macro {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--dark);
-      line-height: 1;
-    }
-    .pouch-macro-sub {
-      font-size: 0.57rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--light);
-      margin-top: 3px;
-    }
-
-    /* Variant colours — muted earthy tones */
+    /* Variant colours */
     .pouch-1 .pouch-color { background: #4A7040; }
     .pouch-2 .pouch-color { background: #9E6060; }
     .pouch-3 .pouch-color { background: #B89060; }
@@ -1158,15 +1209,26 @@
           <div class="pouch-wrap">
             <div class="pouch pouch-1">
               <div class="pouch-color">
-                <div class="pouch-eyebrow">Protein for 50+</div>
-                <div class="pouch-brand">Avéa</div>
-                <div class="pouch-type">Functional Protein</div>
-                <div class="pouch-divider"></div>
+                <div class="pouch-brand-sm">Avéa</div>
+                <div class="pouch-name">Functional<br>Protein</div>
+                <div class="pouch-subtitle">Protein Supplement</div>
+                <div class="pouch-wave">~ ~ ~</div>
+                <div class="pouch-claims">No artificial flavours<br>No added sugar<br>Designed for 50+</div>
+                <div class="pouch-flavor-bar">Cardamom Milk</div>
               </div>
-              <div class="pouch-white">
-                <div class="pouch-flavor">Cardamom Milk</div>
-                <div class="pouch-macro">25g</div>
-                <div class="pouch-macro-sub">Protein per serving</div>
+              <div class="pouch-bottom">
+                <div class="pouch-stats">
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">25g</span>
+                    <span class="pouch-stat-label">Protein</span>
+                  </div>
+                  <div class="pouch-stat-div"></div>
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">500g</span>
+                    <span class="pouch-stat-label">Net Weight</span>
+                  </div>
+                </div>
+                <div class="pouch-net-wt">For Adults 50+ &nbsp;&middot;&nbsp; Nutraceutical</div>
               </div>
             </div>
           </div>
@@ -1175,15 +1237,26 @@
           <div class="pouch-wrap">
             <div class="pouch pouch-2">
               <div class="pouch-color">
-                <div class="pouch-eyebrow">Protein for 50+</div>
-                <div class="pouch-brand">Avéa</div>
-                <div class="pouch-type">Functional Protein</div>
-                <div class="pouch-divider"></div>
+                <div class="pouch-brand-sm">Avéa</div>
+                <div class="pouch-name">Functional<br>Protein</div>
+                <div class="pouch-subtitle">Protein Supplement</div>
+                <div class="pouch-wave">~ ~ ~</div>
+                <div class="pouch-claims">No artificial flavours<br>No added sugar<br>Designed for 50+</div>
+                <div class="pouch-flavor-bar">Rose Lassi</div>
               </div>
-              <div class="pouch-white">
-                <div class="pouch-flavor">Rose Lassi</div>
-                <div class="pouch-macro">25g</div>
-                <div class="pouch-macro-sub">Protein per serving</div>
+              <div class="pouch-bottom">
+                <div class="pouch-stats">
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">25g</span>
+                    <span class="pouch-stat-label">Protein</span>
+                  </div>
+                  <div class="pouch-stat-div"></div>
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">500g</span>
+                    <span class="pouch-stat-label">Net Weight</span>
+                  </div>
+                </div>
+                <div class="pouch-net-wt">For Adults 50+ &nbsp;&middot;&nbsp; Nutraceutical</div>
               </div>
             </div>
           </div>
@@ -1192,15 +1265,26 @@
           <div class="pouch-wrap">
             <div class="pouch pouch-3">
               <div class="pouch-color">
-                <div class="pouch-eyebrow">Protein for 50+</div>
-                <div class="pouch-brand">Avéa</div>
-                <div class="pouch-type">Functional Protein</div>
-                <div class="pouch-divider"></div>
+                <div class="pouch-brand-sm">Avéa</div>
+                <div class="pouch-name">Functional<br>Protein</div>
+                <div class="pouch-subtitle">Protein Supplement</div>
+                <div class="pouch-wave">~ ~ ~</div>
+                <div class="pouch-claims">No artificial flavours<br>No added sugar<br>Designed for 50+</div>
+                <div class="pouch-flavor-bar">Natural Vanilla</div>
               </div>
-              <div class="pouch-white">
-                <div class="pouch-flavor">Natural Vanilla</div>
-                <div class="pouch-macro">25g</div>
-                <div class="pouch-macro-sub">Protein per serving</div>
+              <div class="pouch-bottom">
+                <div class="pouch-stats">
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">25g</span>
+                    <span class="pouch-stat-label">Protein</span>
+                  </div>
+                  <div class="pouch-stat-div"></div>
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">500g</span>
+                    <span class="pouch-stat-label">Net Weight</span>
+                  </div>
+                </div>
+                <div class="pouch-net-wt">For Adults 50+ &nbsp;&middot;&nbsp; Nutraceutical</div>
               </div>
             </div>
           </div>
@@ -1209,15 +1293,26 @@
           <div class="pouch-wrap">
             <div class="pouch pouch-4">
               <div class="pouch-color">
-                <div class="pouch-eyebrow">Protein for 50+</div>
-                <div class="pouch-brand">Avéa</div>
-                <div class="pouch-type">Functional Protein</div>
-                <div class="pouch-divider"></div>
+                <div class="pouch-brand-sm">Avéa</div>
+                <div class="pouch-name">Functional<br>Protein</div>
+                <div class="pouch-subtitle">Protein Supplement</div>
+                <div class="pouch-wave">~ ~ ~</div>
+                <div class="pouch-claims">No artificial flavours<br>No added sugar<br>Designed for 50+</div>
+                <div class="pouch-flavor-bar">Haldi Milk</div>
               </div>
-              <div class="pouch-white">
-                <div class="pouch-flavor">Haldi Milk</div>
-                <div class="pouch-macro">25g</div>
-                <div class="pouch-macro-sub">Protein per serving</div>
+              <div class="pouch-bottom">
+                <div class="pouch-stats">
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">25g</span>
+                    <span class="pouch-stat-label">Protein</span>
+                  </div>
+                  <div class="pouch-stat-div"></div>
+                  <div class="pouch-stat">
+                    <span class="pouch-stat-num">500g</span>
+                    <span class="pouch-stat-label">Net Weight</span>
+                  </div>
+                </div>
+                <div class="pouch-net-wt">For Adults 50+ &nbsp;&middot;&nbsp; Nutraceutical</div>
               </div>
             </div>
           </div>
