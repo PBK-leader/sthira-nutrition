@@ -496,7 +496,19 @@
       box-shadow: 0 12px 40px rgba(0,0,0,0.15);
     }
 
-    .why-icon { font-size: 2.2rem; line-height: 1; margin-bottom: 20px; }
+    .why-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,0.10);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .why-icon svg { width: 26px; height: 26px; }
     .why-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--gold); margin-bottom: 12px; font-family: var(--body); }
     .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.70); line-height: 1.70; }
 
@@ -1305,17 +1317,17 @@
     </div>
     <div class="why-cards fade fade-stagger">
       <div class="why-card">
-        <div class="why-icon">💪</div>
+        <div class="why-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="5" r="2"/><line x1="13" y1="7" x2="13" y2="16"/><line x1="13" y1="10" x2="9" y2="13"/><line x1="13" y1="10" x2="17" y2="13"/><line x1="13" y1="16" x2="10" y2="22"/><line x1="13" y1="16" x2="16" y2="22"/></svg></div>
         <h3>Stay Strong, Stay Independent</h3>
         <p>Adequate protein intake can reduce age-related muscle loss by up to 40%, helping your parents stay active and independent for longer.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">🦴</div>
+        <div class="why-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="17" x2="17" y2="9"/><circle cx="7" cy="19" r="2.8"/><circle cx="19" cy="7" r="2.8"/></svg></div>
         <h3>Protect Bones &amp; Joints</h3>
         <p>Protein + Calcium + Vitamin D is the clinically-validated trio for reducing fracture risk and supporting joint health in aging adults.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">⚡</div>
+        <div class="why-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 8 14 13 14 11 23 18 12 13 12 15 3"/></svg></div>
         <h3>More Energy, Every Day</h3>
         <p>Protein fuels the neurotransmitters that drive mood and alertness. Many seniors report feeling noticeably more energetic within weeks.</p>
       </div>
