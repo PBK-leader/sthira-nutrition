@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sthira — Protein designed for Indian adults 50 and above. Formulated to fight muscle loss, boost strength, and support active, independent aging.">
-  <title>Sthira — Protein for Strength After 50</title>
+  <meta name="description" content="Sthira Nutrition — Protein designed for Indian adults 50 and above. Formulated to fight muscle loss, boost strength, and support active, independent aging.">
+  <title>Sthira Nutrition — Protein for Strength After 50</title>
 
   <!-- GA4 — Replace G-XXXXXXXXXX with your Measurement ID from Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y4FZM5QCK"></script>
@@ -167,13 +167,29 @@
     }
 
     .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .logo-brand {
       font-family: var(--heading);
-      font-size: 1.65rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--green);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      line-height: 1;
     }
-    .logo em { font-style: normal; color: var(--amber); }
+    .logo-sub {
+      font-family: var(--body);
+      font-size: 0.54rem;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber);
+      line-height: 1;
+    }
 
     .nav-btn {
       font-size: 0.94rem;
@@ -752,8 +768,14 @@
       text-align: center;
     }
 
-    .footer-logo { font-family: var(--heading); font-size: 2rem; font-weight: 700; color: var(--white); }
-    .footer-logo em { font-style: normal; color: var(--gold); }
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer-logo .logo-brand { color: var(--white); font-size: 2.4rem; }
+    .footer-logo .logo-sub { color: var(--gold); }
 
     .footer-tagline { font-size: 0.9rem; max-width: 420px; line-height: 1.65; }
 
@@ -1065,7 +1087,10 @@
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <div class="logo">Sthira</div>
+      <div class="logo">
+        <span class="logo-brand">Sthira</span>
+        <span class="logo-sub">Nutrition</span>
+      </div>
       <a href="#survey" class="btn btn-amber nav-btn">Join the Waitlist</a>
     </div>
   </div>
@@ -1085,7 +1110,7 @@
         </h1>
         <p class="hero-sub">
           After 50, the body loses muscle faster than it can rebuild — a condition called sarcopenia.
-          Sthira is a protein supplement designed specifically for Indian adults over 50,
+          Sthira Nutrition is a protein supplement designed specifically for Indian adults over 50,
           to help you — or someone you love — stay strong, active, and independent.
         </p>
         <div class="hero-ctas">
@@ -1146,7 +1171,7 @@
       <p class="problem-lead">
         Gym-focused protein powders are designed for young athletes, not aging adults.
         They're heavy, artificial, and ignore the specific needs of the Indian body at 50+.
-        Sthira is being built differently — from the ground up for this stage of life.
+        Sthira Nutrition is being built differently — from the ground up for this stage of life.
       </p>
     </div>
     <div class="problem-cards fade fade-stagger">
@@ -1173,7 +1198,7 @@
 <section id="product" class="product">
   <div class="container">
     <div class="fade">
-      <div class="section-tag">Introducing Sthira</div>
+      <div class="section-tag">Introducing Sthira Nutrition</div>
     </div>
     <div class="product-grid">
 
@@ -1312,7 +1337,7 @@
       <div class="product-content fade">
         <h2>Protein that fits the Indian way of aging &mdash; with grace.</h2>
         <p>
-          Sthira is a clean, easy-to-digest protein formula for adults 50 and above.
+          Sthira Nutrition is a clean, easy-to-digest protein formula for adults 50 and above.
           Designed to pair with your daily routine — morning lassi, evening milk, or just warm water —
           not replace it.
         </p>
@@ -1747,7 +1772,7 @@
         <!-- STEP 11: Contact capture -->
         <div class="form-step" id="step11">
           <div class="q-text">Almost done — where should we reach you?</div>
-          <div class="q-hint">We'll notify you first when Sthira launches.</div>
+          <div class="q-hint">We'll notify you first when Sthira Nutrition launches.</div>
 
           <form id="contactForm" action="https://formspree.io/f/xgolpqqe" method="POST">
 
@@ -1830,7 +1855,7 @@
           <div class="ty-icon">🙏</div>
           <h3 class="ty-title">You're on the list!</h3>
           <p class="ty-body">
-            Thank you for helping us build Sthira. You'll be among the very first to know
+            Thank you for helping us build Sthira Nutrition. You'll be among the very first to know
             when we launch — and your answers will directly shape the product.
           </p>
           <p class="ty-share">
@@ -1847,7 +1872,10 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Sthira</div>
+      <div class="footer-logo">
+        <span class="logo-brand">Sthira</span>
+        <span class="logo-sub">Nutrition</span>
+      </div>
       <p class="footer-tagline">
         Protein designed for Indian adults over 50. Built with love by a team that believes
         our parents deserve to age with strength and dignity.
@@ -1856,7 +1884,7 @@
         <a href="#survey">Early Access</a>
       </div>
       <div class="footer-copy">
-        &copy; 2026 Sthira. All rights reserved.
+        &copy; 2026 Sthira Nutrition. All rights reserved.
         This product is currently in development. Early access registrations do not constitute a purchase.
       </div>
     </div>
