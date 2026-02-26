@@ -1110,7 +1110,7 @@
     .result-main { text-align: center; margin-bottom: 28px; }
     .result-grams-num { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--amber); line-height: 1; font-family: var(--heading); }
     .result-unit { font-size: 1rem; color: var(--mid); font-weight: 500; margin-top: 6px; }
-    .result-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .result-breakdown { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
     .breakdown-item { background: var(--cream-dark); border-radius: var(--radius-sm); padding: 18px 12px; text-align: center; }
     .bd-val { font-size: 1.3rem; font-weight: 700; color: var(--green); }
     .bd-label { font-size: 0.75rem; color: var(--mid); margin-top: 5px; line-height: 1.3; }
@@ -1133,7 +1133,6 @@
     @media (max-width: 640px) {
       .calc-card { padding: 32px 20px; }
       .result-breakdown { grid-template-columns: 1fr 1fr; }
-      .result-breakdown .breakdown-item:last-child { grid-column: 1 / -1; }
       .food-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -1523,11 +1522,7 @@
             <div class="bd-val" id="result-per-meal">26g</div>
             <div class="bd-label">Per meal target<br>(3 meals/day)</div>
           </div>
-          <div class="breakdown-item">
-            <div class="bd-val" id="result-servings">4</div>
-            <div class="bd-label">Sthira servings<br>to meet your need</div>
-          </div>
-          <div class="breakdown-item">
+<div class="breakdown-item">
             <div class="bd-val" id="result-coverage">32%</div>
             <div class="bd-label">Of daily need per<br>Sthira serving</div>
           </div>
