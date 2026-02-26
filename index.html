@@ -294,18 +294,24 @@
     /* =============================================
        STATS STRIP
     ============================================= */
-    .stats-strip {
+    .sarco-section {
       background: var(--cream-dark);
-      padding: 72px 0;
+      padding: 100px 0;
       border-top: 1px solid rgba(24,56,8,0.08);
       border-bottom: 1px solid rgba(24,56,8,0.08);
     }
+
+    .sarco-copy { max-width: 680px; margin-bottom: 64px; }
+    .sarco-copy p { font-size: 1.08rem; color: var(--mid); line-height: 1.75; margin-bottom: 20px; }
+    .sarco-copy p:last-child { margin-bottom: 0; }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       text-align: center;
+      padding-top: 56px;
+      border-top: 1px solid rgba(24,56,8,0.10);
     }
 
     .stat-divider {
@@ -1068,7 +1074,8 @@
     @media (max-width: 600px) {
       .hero { padding: 56px 0 72px; }
       .stats-grid { grid-template-columns: 1fr; gap: 36px; }
-      .stat-divider { border-left: none; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 36px; }
+      .stat-divider { border-left: none; border-top: 1px solid rgba(24,56,8,0.10); padding-top: 36px; }
+      .sarco-copy { margin-bottom: 40px; }
       .form-card { padding: 30px 20px; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas .btn { text-align: center; }
@@ -1191,9 +1198,24 @@
   </div>
 </section>
 
-<!-- ===================== STATS STRIP ===================== -->
-<section class="stats-strip">
+<!-- ===================== SARCOPENIA + STATS ===================== -->
+<section class="sarco-section">
   <div class="container">
+
+    <div class="sarco-copy fade">
+      <div class="section-tag">The Silent Threat</div>
+      <h2>After 50, your muscles are quietly disappearing.</h2>
+      <p>
+        Sarcopenia — the medical term for age-related muscle loss — begins as early as your 40s and accelerates with every passing decade. By the time most people notice the signs — persistent fatigue, difficulty climbing stairs, a grip that isn't what it used to be — they've already lost a significant amount of muscle mass.
+      </p>
+      <p>
+        The process is gradual and invisible. There's no pain, no alarm. Just a slow erosion of the strength that keeps you independent, mobile, and able to do the things you love. Left unaddressed, sarcopenia leads to falls, fractures, and a loss of the autonomy that defines a dignified life after 50.
+      </p>
+      <p>
+        The good news: it is largely preventable — and even reversible — with the right protein intake. But in India, most adults over 50 aren't getting nearly enough.
+      </p>
+    </div>
+
     <div class="stats-grid fade fade-stagger">
       <div>
         <span class="stat-num">73%</span>
@@ -1208,6 +1230,7 @@
         <div class="stat-desc">senior falls linked to<br>muscle weakness in India</div>
       </div>
     </div>
+
   </div>
 </section>
 
