@@ -1105,7 +1105,8 @@
     .act-pill:hover { border-color: var(--amber); }
     .act-pill.selected { border-color: var(--amber); background: var(--amber-light); font-weight: 600; color: var(--amber-dark); }
     .calc-error { font-size: 0.88rem; color: #C0392B; margin-top: 10px; display: none; }
-    .calc-result { margin-top: 36px; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 36px; opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; pointer-events: none; }
+    .calc-result { display: none; margin-top: 36px; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 36px; opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; pointer-events: none; }
+    .calc-result.shown { display: block; }
     .calc-result.visible { opacity: 1; transform: none; pointer-events: auto; }
     .result-main { text-align: center; margin-bottom: 28px; }
     .result-grams-num { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--amber); line-height: 1; font-family: var(--heading); }
@@ -2257,6 +2258,8 @@
       });
 
       var resultEl = document.getElementById('calc-result');
+      resultEl.classList.add('shown');
+      resultEl.offsetHeight; // force reflow so transition fires
       resultEl.classList.add('visible');
       setTimeout(function() {
         resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
