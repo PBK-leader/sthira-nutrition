@@ -1079,6 +1079,55 @@
       .can-brand { font-size: 1.05rem; }
       .can-badge { width: 28px; height: 28px; font-size: 0.48rem; top: 8px; right: 7px; }
     }
+
+    /* ===================== PROTEIN CALCULATOR ===================== */
+    .calc-section { background: var(--cream-dark); padding: 100px 0; }
+    .calc-lead { font-size: 1.12rem; color: var(--mid); max-width: 560px; margin-bottom: 48px; line-height: 1.6; }
+    .calc-card { background: var(--white); border-radius: var(--radius); padding: 48px 44px; box-shadow: var(--shadow-lg); max-width: 680px; }
+    .calc-inputs { display: flex; flex-direction: column; gap: 32px; margin-bottom: 36px; }
+    .calc-field label { font-weight: 600; font-size: 0.92rem; color: var(--dark); display: block; margin-bottom: 10px; letter-spacing: 0.02em; text-transform: uppercase; }
+    .weight-wrap { display: flex; align-items: center; gap: 12px; }
+    .weight-wrap input.field { width: 120px; }
+    .weight-unit { font-weight: 600; color: var(--mid); font-size: 0.95rem; }
+    .age-wrap { display: flex; align-items: center; gap: 16px; }
+    .age-wrap input[type=range] { flex: 1; accent-color: var(--amber); cursor: pointer; height: 6px; border-radius: 3px; }
+    .age-display { font-size: 1.4rem; font-weight: 700; color: var(--amber); min-width: 44px; }
+    .activity-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .act-pill { padding: 10px 20px; border: 2px solid rgba(0,0,0,0.09); border-radius: 50px; font-size: 0.92rem; font-weight: 500; cursor: pointer; background: none; font-family: var(--body); transition: all 0.15s ease; color: var(--dark); }
+    .act-pill:hover { border-color: var(--amber); }
+    .act-pill.selected { border-color: var(--amber); background: var(--amber-light); font-weight: 600; color: var(--amber-dark); }
+    .calc-error { font-size: 0.88rem; color: #C0392B; margin-top: 10px; display: none; }
+    .calc-result { margin-top: 36px; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 36px; opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; pointer-events: none; }
+    .calc-result.visible { opacity: 1; transform: none; pointer-events: auto; }
+    .result-main { text-align: center; margin-bottom: 28px; }
+    .result-grams-num { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--amber); line-height: 1; font-family: var(--heading); }
+    .result-unit { font-size: 1rem; color: var(--mid); font-weight: 500; margin-top: 6px; }
+    .result-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .breakdown-item { background: var(--cream-dark); border-radius: var(--radius-sm); padding: 18px 12px; text-align: center; }
+    .bd-val { font-size: 1.3rem; font-weight: 700; color: var(--green); }
+    .bd-label { font-size: 0.75rem; color: var(--mid); margin-top: 5px; line-height: 1.3; }
+    .result-note { font-size: 0.95rem; color: var(--mid); line-height: 1.6; margin-bottom: 28px; background: var(--green-light); border-left: 3px solid var(--green); padding: 14px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .food-ref { margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(0,0,0,0.07); margin-bottom: 32px; }
+    .food-ref-title { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .food-ref-sub { font-size: 0.88rem; color: var(--mid); margin-bottom: 18px; }
+    .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .food-card { display: flex; align-items: center; gap: 12px; background: var(--cream-dark); border-radius: var(--radius-sm); padding: 12px 14px; }
+    .food-emoji { font-size: 1.6rem; flex-shrink: 0; line-height: 1; }
+    .food-info { flex: 1; min-width: 0; }
+    .food-name { font-size: 0.88rem; font-weight: 600; color: var(--dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .food-hindi { font-weight: 400; color: var(--mid); }
+    .food-serving { font-size: 0.75rem; color: var(--light); margin-top: 2px; }
+    .food-protein-col { text-align: right; flex-shrink: 0; }
+    .food-protein-val { font-size: 0.95rem; font-weight: 700; color: var(--green); }
+    .food-bar-wrap { width: 60px; height: 4px; background: rgba(0,0,0,0.08); border-radius: 2px; margin: 5px 0 3px auto; }
+    .food-bar { height: 100%; background: var(--amber); border-radius: 2px; transition: width 0.6s ease 0.1s; }
+    .food-pct { font-size: 0.7rem; color: var(--mid); }
+    @media (max-width: 640px) {
+      .calc-card { padding: 32px 20px; }
+      .result-breakdown { grid-template-columns: 1fr 1fr; }
+      .result-breakdown .breakdown-item:last-child { grid-column: 1 / -1; }
+      .food-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1396,6 +1445,83 @@
         <div class="why-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 8 14 13 14 11 23 18 12 13 12 15 3"/></svg></div>
         <h3>More Energy, Every Day</h3>
         <p>Protein fuels the neurotransmitters that drive mood and alertness. Many seniors report feeling noticeably more energetic within weeks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROTEIN CALCULATOR ===================== -->
+<section class="calc-section fade">
+  <div class="container">
+    <div class="section-tag">Know Your Numbers</div>
+    <h2>How much protein do you need each day?</h2>
+    <p class="calc-lead">Based on current nutrition science for adults 50+. Enter your details for a personalised daily target — and see how everyday Indian meals stack up.</p>
+
+    <div class="calc-card">
+      <div class="calc-inputs">
+
+        <div class="calc-field">
+          <label>Your Weight</label>
+          <div class="weight-wrap">
+            <input type="number" id="calc-weight" class="field" placeholder="65" min="30" max="200" inputmode="decimal">
+            <span class="weight-unit">kg</span>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label>Your Age — <span id="calc-age-display" style="color:var(--amber)">62</span></label>
+          <div class="age-wrap">
+            <input type="range" id="calc-age" min="50" max="80" value="62">
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label>Activity Level</label>
+          <div class="activity-pills">
+            <button class="act-pill" data-val="sedentary">Sedentary</button>
+            <button class="act-pill" data-val="light">Light</button>
+            <button class="act-pill" data-val="moderate">Moderate</button>
+            <button class="act-pill" data-val="active">Very Active</button>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn btn-amber" id="calc-btn" style="width:100%">Calculate My Requirement &rarr;</button>
+      <div class="calc-error" id="calc-error"></div>
+
+      <div class="calc-result" id="calc-result">
+
+        <div class="result-main">
+          <div class="result-grams-num" id="result-grams">78</div>
+          <div class="result-unit">grams of protein per day</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="breakdown-item">
+            <div class="bd-val" id="result-per-meal">26g</div>
+            <div class="bd-label">Per meal target<br>(3 meals/day)</div>
+          </div>
+          <div class="breakdown-item">
+            <div class="bd-val" id="result-servings">4</div>
+            <div class="bd-label">Sthira servings<br>to meet your need</div>
+          </div>
+          <div class="breakdown-item">
+            <div class="bd-val" id="result-coverage">32%</div>
+            <div class="bd-label">Of daily need per<br>Sthira serving</div>
+          </div>
+        </div>
+
+        <p class="result-note" id="result-note"></p>
+
+        <div class="food-ref">
+          <h4 class="food-ref-title">How do everyday Indian foods compare?</h4>
+          <p class="food-ref-sub">Based on your <strong id="food-ref-grams">78</strong>g daily requirement</p>
+          <div class="food-grid" id="food-grid"></div>
+        </div>
+
+        <a href="#survey" class="btn btn-amber" style="width:100%;text-align:center;display:block">Get Early Access Based on Your Needs &rarr;</a>
+
       </div>
     </div>
   </div>
@@ -2018,6 +2144,108 @@
   /* --------------------------------------------------
      SMOOTH SCROLL for anchor links
   -------------------------------------------------- */
+  /* --------------------------------------------------
+     PROTEIN CALCULATOR
+  -------------------------------------------------- */
+  (function() {
+    var selectedActivity = null;
+
+    var indianFoods = [
+      { name: 'Eggs',      hindi: 'Anda',          serving: '2 eggs',          protein: 12, emoji: '🥚' },
+      { name: 'Paneer',    hindi: 'Paneer',         serving: '100g',            protein: 18, emoji: '🧀' },
+      { name: 'Toor Dal',  hindi: 'Arhar Dal',      serving: '1 cup cooked',    protein: 11, emoji: '🫘' },
+      { name: 'Chana',     hindi: 'Kabuli Chana',   serving: '1 cup cooked',    protein: 15, emoji: '🌰' },
+      { name: 'Rajma',     hindi: 'Rajma',          serving: '1 cup cooked',    protein: 13, emoji: '🫘' },
+      { name: 'Milk',      hindi: 'Doodh',          serving: '1 glass (250ml)', protein: 8,  emoji: '🥛' },
+      { name: 'Chicken',   hindi: 'Murgi',          serving: '100g cooked',     protein: 27, emoji: '🍗' },
+      { name: 'Curd',      hindi: 'Dahi',           serving: '1 cup (200g)',    protein: 10, emoji: '🥄' }
+    ];
+
+    var ageSlider = document.getElementById('calc-age');
+    var ageDisplay = document.getElementById('calc-age-display');
+    ageSlider.addEventListener('input', function() {
+      ageDisplay.textContent = ageSlider.value;
+    });
+
+    document.querySelectorAll('.act-pill').forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        document.querySelectorAll('.act-pill').forEach(function(p) { p.classList.remove('selected'); });
+        pill.classList.add('selected');
+        selectedActivity = pill.dataset.val;
+      });
+    });
+
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      var weight = parseFloat(document.getElementById('calc-weight').value);
+      var age = parseInt(ageSlider.value);
+      var errorEl = document.getElementById('calc-error');
+
+      if (!weight || weight < 30 || weight > 200) {
+        errorEl.textContent = 'Please enter a valid weight between 30 and 200 kg.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      if (!selectedActivity) {
+        errorEl.textContent = 'Please select your activity level.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      errorEl.style.display = 'none';
+
+      var baseRates = { sedentary: 1.0, light: 1.2, moderate: 1.4, active: 1.6 };
+      var ageBonus = age <= 60 ? 0 : age <= 70 ? 0.1 : 0.2;
+      var rate = baseRates[selectedActivity] + ageBonus;
+      var grams = Math.round(weight * rate);
+      var perMeal = Math.round(grams / 3);
+      var servings = Math.ceil(grams / 25);
+      var coverage = Math.round((25 / grams) * 100);
+
+      var notes = {
+        sedentary: 'Even without heavy exercise, your muscles need consistent protein to stay strong and independent as you age.',
+        light: 'Regular light movement means your muscles are working — give them the protein they need to repair and grow.',
+        moderate: "You're active enough that protein becomes critical for recovery and maintaining lean mass.",
+        active: 'High activity accelerates muscle breakdown. Meeting your protein target daily is non-negotiable.'
+      };
+
+      document.getElementById('result-grams').textContent = grams;
+      document.getElementById('result-per-meal').textContent = perMeal + 'g';
+      document.getElementById('result-servings').textContent = servings;
+      document.getElementById('result-coverage').textContent = coverage + '%';
+      document.getElementById('result-note').textContent = notes[selectedActivity];
+      document.getElementById('food-ref-grams').textContent = grams;
+
+      var foodGrid = document.getElementById('food-grid');
+      foodGrid.innerHTML = '';
+      indianFoods.forEach(function(food) {
+        var pct = Math.min(Math.round((food.protein / grams) * 100), 100);
+        var card = document.createElement('div');
+        card.className = 'food-card';
+        card.innerHTML =
+          '<div class="food-emoji">' + food.emoji + '</div>' +
+          '<div class="food-info">' +
+            '<div class="food-name">' + food.name + ' <span class="food-hindi">&middot; ' + food.hindi + '</span></div>' +
+            '<div class="food-serving">' + food.serving + '</div>' +
+          '</div>' +
+          '<div class="food-protein-col">' +
+            '<div class="food-protein-val">' + food.protein + 'g</div>' +
+            '<div class="food-bar-wrap"><div class="food-bar" style="width:0%"></div></div>' +
+            '<div class="food-pct">' + pct + '% of daily need</div>' +
+          '</div>';
+        foodGrid.appendChild(card);
+        // Animate bar after append
+        setTimeout(function() {
+          card.querySelector('.food-bar').style.width = pct + '%';
+        }, 50);
+      });
+
+      var resultEl = document.getElementById('calc-result');
+      resultEl.classList.add('visible');
+      setTimeout(function() {
+        resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 120);
+    });
+  })();
+
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
